@@ -17,18 +17,32 @@ bool isprime(int n)
     return true;
 }
 
+//   print all prime number upto n
+
+void printPrimes(int n)
+{
+    for (int i = 2; i <= n - 1; i++)
+    {
+        if (isprime(i))
+        {
+            cout << i << " ";
+        }
+    }
+}
+
 int main()
 {
     long long int n;
     cin >> n;
-    if (isprime(n))
-    {
-        cout << n << " is prime" << endl;
-    }
-    else
-    {
-        cout << n << " not prime" << endl;
-    }
+    printPrimes(n);
+    // if (isprime(n))
+    // {
+    //     cout << n << " is prime" << endl;
+    // }
+    // else
+    // {
+    //     cout << n << " not prime" << endl;
+    // }
 
     return 0;
 }
