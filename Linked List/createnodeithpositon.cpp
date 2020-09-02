@@ -51,13 +51,20 @@ Node *takeInputBetter()
     return head;
 }
 
-void insertNode(Node *head, int i, int data)
+Node *insertNode(Node *head, int i, int data)
 {
     Node *newNode = new Node(data);
 
+    if (i == 0)
+    {
+        newNode->next = head;
+        head = newNode;
+        return head;
+    }
+
     int count = 0;
     Node *temp = head;
-    while (count < i - 1)
+    while (temp != NULL && count < i - 1)
     {
         temp = temp->next;
         count++;
@@ -66,9 +73,15 @@ void insertNode(Node *head, int i, int data)
      temp->next = newNode;
      newNode -> next =  a;
      */
-    newNode->next = temp->next;
-    temp->next = newNode;
+    if (temp != NULL)
+    {
+        newNode->next = temp->next;
+        temp->next = newNode;
+    }
+    return head;
 }
+
+void deleteNode(int )
 
 void print(Node *head)
 {
@@ -93,6 +106,6 @@ int main()
     print(head);
     int i, data;
     cin >> i >> data;
-    insertNode(head, i, data);
+    head = insertNode(head, i, data);
     print(head);
 }
