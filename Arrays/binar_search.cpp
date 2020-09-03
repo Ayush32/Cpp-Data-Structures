@@ -44,6 +44,9 @@ int main()
     {
         cin >> arr[i];
     }
-    int key = 0;
+    int key;
+    cout << "Enter the key you want to search: ";
     cin >> key;
+    cout << binary_search(arr, n, key) << endl;
+    return 0;
 }
