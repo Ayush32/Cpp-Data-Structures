@@ -44,7 +44,6 @@ int main()
     int a[1000][1000] = {0};
     int n;
     cin >> n;
-    int value = 1;
 
     for (int row = 0; row <= n; row++)
     {
