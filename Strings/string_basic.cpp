@@ -34,5 +34,18 @@ int main()
     cout << s0 << endl;
     s0 += "and python";
     cout << s0 << endl;
+
+    // remove or erase the content the string
+    cout << s0.length() << endl;
+    s0.clear();
+    cout << s0.length() << endl;
+
+    // compare the two string
+    s0 = "Apple";
+    s1 = "Mango";
+    cout << s1.compare(s0) << endl;
+    // print 0 if equal
+    cout << s1.compare(s1) << endl;
+
     return 0;
 }
