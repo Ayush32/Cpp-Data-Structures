@@ -99,14 +99,13 @@ int main()
     // foreach oop
     for (auto c : ss)
     {
-        cout << c << ".";
+        cout << c << "." << endl;
     }
 
     // sort string
     string Sorting = "bbccaasdsadfafaa";
-    sort(Sorting.begin(), Sorting.end())
-            cout
-        << Sorting << endl;
+    sort(Sorting.begin(), Sorting.end());
+    cout << Sorting << endl;
 
     return 0;
 }
