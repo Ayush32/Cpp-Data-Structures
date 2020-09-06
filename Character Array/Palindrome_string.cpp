@@ -27,15 +27,22 @@ bool isPalindrome(char a[])
 
 int main()
 {
+    int n;
+    cin >> n;
+
     char a[1000];
-    cin.getline(a, 1000);
+    cin.get();
+    for (int i = 0; i < n; i++)
+    {
+        cin.getline(a, 1000);
+    }
     if (isPalindrome(a))
     {
-        cout << "Palindrome String" << endl;
+        cout << "true" << endl;
     }
     else
     {
-        cout << "Palindrome String" << endl;
+        cout << "false" << endl;
     }
     return 0;
 }
