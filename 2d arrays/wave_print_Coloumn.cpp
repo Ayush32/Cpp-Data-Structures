@@ -27,17 +27,18 @@ int main()
         {
             for (int row = 0; row < m; row++)
             {
-                cout << arr[row][col] << ",";
+                cout << arr[row][col] << ", ";
             }
         }
         else
         {
             for (int row = m - 1; row >= 0; row--)
             {
-                cout << arr[row][col] << ",";
+                cout << arr[row][col] << ", ";
             }
         }
     }
     cout << "END";
+
     return 0;
 }
