@@ -5,6 +5,7 @@
         "cstring": "cpp",
         "string": "cpp",
         "sstream": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "*.tcc": "cpp"
     }
 }
