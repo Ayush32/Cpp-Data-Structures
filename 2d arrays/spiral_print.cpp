@@ -2,70 +2,60 @@
  *   Copyright (c) 2020 
  *   All rights reserved.
  */
-
 #include <iostream>
 using namespace std;
 
-void spiralPrint(int a[][1000], int m, int n)
+void spiral_print(int a[][1000], int m, int n)
 {
-    int startRow = 0;
-    int startCol = 0;
-    int endRow = m - 1;
-    int endCol = n - 1;
-
-    while (startRow <= endRow && startCol <= endCol)
+    int startrow = 0;
+    int endrow = m - 1;
+    int startcol = 0;
+    int endcol = n - 1;
+    while (startrow <= endrow && startcol <= endcol)
     {
-        for (int i = startRow; i <= endCol; i++)
+        for (int i = startrow; i <= endrow; i++)
         {
-            cout << a[startRow][i] << " ";
+            cout << a[i][startcol] << ", ";
         }
-        startRow++;
-        for (int i = startRow; i <= endRow; i++)
+        startcol++;
+        for (int i = startcol; i <= endcol; i++)
         {
-            cout << a[i][endCol] << " ";
+            cout << a[endrow][i] << ", ";
         }
-        endCol--;
-
+        endrow--;
         // bottom row
-        if (endRow > startRow)
+        if (endcol >= startcol)
         {
-            for (int i = endCol; i >= startCol; i++)
+            for (int i = endrow; i >= startrow; i--)
             {
-                cout << a[endRow][i] << " ";
+                cout << a[i][endcol] << ", ";
             }
-            endRow--;
+            endcol--;
         }
-        if (endCol > startCol)
+        if (startrow <= endrow)
         {
-            for (int i = endRow; i >= startRow; i++)
+            for (int i = endcol; i >= startcol; i++)
             {
-                cout << a[i][startCol] << " ";
+                cout << a[startrow][i] << ", ";
             }
-            startCol++;
+            startrow++;
         }
     }
 }
-
 int main()
 {
+    int m, n;
 
-    int a[1000][1000] = {0};
-    int m;
-    int n;
     cin >> m >> n;
-    int value = 1;
-
-    for (int row = 0; row <= m - 1; row++)
+    int arr[1000][1000];
+    for (int row = 0; row < m; row++)
     {
-        for (int col = 0; col <= n - 1; col++)
+        for (int col = 0; col < n; col++)
         {
-            a[row][col] = value;
-            value = value + 1;
-            cout << a[row][col] << " ";
+            cin >> arr[row][col];
         }
-        cout << endl;
     }
-    spiralPrint(a, m, n);
+    spiral_print(arr, m, n);
 
     return 0;
 }

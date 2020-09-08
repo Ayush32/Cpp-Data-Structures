@@ -2,6 +2,10 @@
  *   Copyright (c) 2020 
  *   All rights reserved.
  */
+/*
+ *   Copyright (c) 2020 
+ *   All rights reserved.
+ */
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -41,9 +45,9 @@ void display(int a[][1000], int n)
 int main()
 {
 
-    int a[1000][1000] = {0};
-    int n;
+       int n;
     cin >> n;
+    int a[1000][1000];
 
     for (int row = 0; row <= n; row++)
     {
