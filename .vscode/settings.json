@@ -6,6 +6,7 @@
         "string": "cpp",
         "sstream": "cpp",
         "regex": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "algorithm": "cpp"
     }
 }
