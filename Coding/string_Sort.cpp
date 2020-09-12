@@ -4,37 +4,32 @@
  */
 #include <iostream>
 #include <algorithm>
-#include <string>
 using namespace std;
-
-// comprators
 
 bool compare(string a, string b)
 {
+
     if (a.length() == b.length())
     {
         return a < b;
     }
-    else
+
+    else if (a.length() > b.length())
     {
-        return a.length() > b.length();
+        return a > b;
     }
 }
-
 int main()
 {
     int n;
     cin >> n;
-
     cin.get();
-
-    string s[100];
-
+    string s[n];
     for (int i = 0; i < n; i++)
     {
         getline(cin, s[i]);
     }
-    sort(s, s + n);
+    sort(s, s + n, compare);
 
     for (int i = 0; i < n; i++)
     {
