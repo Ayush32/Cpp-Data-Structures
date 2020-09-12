@@ -16,7 +16,6 @@ bool canPlaceCows(int stalls[], int n, int c, int min_Step)
         {
             last_cow = stalls[i];
             cnt++;
-
             if (cnt == c)
             {
                 return true;
@@ -39,7 +38,7 @@ int main()
 
     int s = 0;
 
-    int e = stalls[n - 1];
+    int e = stalls[n - 1] - stalls[0];
     int ans = 0;
 
     while (s <= e)
@@ -59,5 +58,4 @@ int main()
     }
 
     cout << ans;
-    return 0;
 }
