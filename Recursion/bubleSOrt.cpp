@@ -23,7 +23,7 @@ void bubble_sort(int a[], int n)
     }
     bubble_sort(a, n - 1);
 }
-
+// complete recursive
 void bubble_sort_recursive(int a[], int j, int n)
 {
     // base case
