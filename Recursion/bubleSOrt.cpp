@@ -7,10 +7,12 @@ using namespace std;
 
 void bubble_sort(int a[], int n)
 {
+    // base case
     if (n == 1)
     {
         return;
     }
+    // recursive case
 
     for (int j = 0; j < n - 1; j++)
     {
