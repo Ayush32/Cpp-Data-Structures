@@ -8,6 +8,7 @@
         "regex": "cpp",
         "*.tcc": "cpp",
         "algorithm": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "new": "cpp"
     }
 }
