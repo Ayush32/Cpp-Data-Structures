@@ -6,18 +6,19 @@
 #include <vector>
 using namespace std;
 
+template <typename T>
 class Stack
 {
 private:
-    vector<int> v;
+    vector<T> v;
 
 public:
     // push the element
-    void push(int data)
+    void push(T data)
     {
         v.push_back(data);
     }
-
+    // chec stack is empty or not
     bool empty()
     {
         return v.size() == 0;
@@ -31,8 +32,8 @@ public:
             v.pop_back();
         }
     }
-
-    int top()
+    //  return top of the stackm
+    T top()
     {
         return v[v.size() - 1];
     }
@@ -40,11 +41,12 @@ public:
 
 int main()
 {
-    Stack s;
+    // Stack<int> s;
+    Stack<char> s;
 
-    for (int i = 0; i <= 5; i++)
+    for (int i = 65; i <= 70; i++)
     {
-        s.push(i * i);
+        s.push(i);
     }
     // try
     while (!s.empty())
