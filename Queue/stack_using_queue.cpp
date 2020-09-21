@@ -40,7 +40,7 @@ public:
         // swap the names of q1 and q2
         swap(q1, q2);
     }
-    void top()
+    int top()
     {
 
         while (q1.size() > 1)
@@ -59,6 +59,7 @@ public:
         q1.pop();
         q2.push(element);
         swap(q1, q2);
+        return element;
     }
     //  elment in Q1
     int size()
