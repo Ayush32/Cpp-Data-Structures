@@ -29,16 +29,13 @@ int main()
     cin.get();
 
     string s[100];
-    string s1 = "ayush";
 
     for (int i = 0; i < n; i++)
     {
         getline(cin, s[i]);
     }
 
-    cout << s + s1 << endl;
-
-    sort(s, s + n);
+    sort(s, s + n, compare);
 
     for (int i = 0; i < n; i++)
     {
