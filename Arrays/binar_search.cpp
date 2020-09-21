@@ -37,8 +37,8 @@ int main()
 {
     int n;
     int i;
-    int arr[1000];
     cin >> n;
+    int arr[1000];
 
     for (i = 0; i < n; i++)
     {
