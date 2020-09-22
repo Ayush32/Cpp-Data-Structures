@@ -8,9 +8,16 @@ using namespace std;
 
 int main(void)
 {
-    bitset<8> bits("1000");
-    int ab = bits.to_ulong();
-    cout << ab << "\n";
+    int n;
+    cin >> n;
+    string s;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> s;
+    }
 
+    int number = 0;
+    number = stoi(s, 0, 8);
+    cout << number << endl;
     return 0;
 }

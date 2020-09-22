@@ -2,6 +2,10 @@
  *   Copyright (c) 2020 
  *   All rights reserved.
  */
+/*
+ *   Copyright (c) 2020 
+ *   All rights reserved.
+ */
 #include <iostream>
 using namespace std;
 
@@ -38,22 +42,23 @@ Node *buildTree()
 
 // preorder printing
 
-void print(Node *root)
+void printInOrder(Node *root)
 {
     if (root == NULL)
     {
         return;
     }
 
-    cout << root->data << " -> ";
-    print(root->left);
-    print(root->right);
+    printInOrder(root->left);
+    cout << root->data << " ";
+    printInOrder(root->right);
 }
 
 int main()
 {
     Node *root = buildTree();
-    cout << "************ PreOrder tree Printing *************" << endl;
-    print(root);
+    cout << "-------------Indorder Printing Tree---------" << endl;
+    printInOrder(root);
+
     return 0;
 }
