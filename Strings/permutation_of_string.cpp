@@ -33,6 +33,19 @@ int main()
     int n = s1.length();
 
     permutation(s1, 0, n - 1);
-    cout << endl;
+
+    string s3 = s2;
+
     reverse(s2.begin(), s2.end());
-    cout << s2 << endl;
+
+    if (s2 == s3)
+    {
+        cout << "palindrome";
+    }
+    else
+    {
+        cout << "not";
+    }
+
+    return 0;
+}
