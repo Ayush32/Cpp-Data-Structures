@@ -9,6 +9,8 @@
         "*.tcc": "cpp",
         "algorithm": "cpp",
         "numeric": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp"
     }
 }
