@@ -1,3 +1,7 @@
+/*
+ *   Copyright (c) 2020 
+ *   All rights reserved.
+ */
 
 #include <iostream>
 #include <queue>
@@ -47,24 +51,28 @@ int height(Node *root)
     return max(leftSubtree, rightSubtree) + 1;
 }
 
-int sum(Node *root)
+int diameter(Node *root)
 {
     if (root == NULL)
     {
         return 0;
     }
-    int s1 = sum(root->left);
-    int s2 = sum(root->right);
-    int s3 = s1 + s2;
-    return root->data + s3;
+    int h1 = height(root->left);
+    int h2 = height(root->right);
+    int op1 = h1 + h2;
+
+    int op2 = diameter(root->left);
+    int op3 = diameter(root->right);
+
+    return max(op1, max(op2, op3));
 }
 
 int main()
 {
     Node *root = buildTree();
-    cout << "-------------Total Number of Nodes---------" << endl;
+    cout << "------------ Diameter of tree ---------" << endl;
 
-    cout << sum(root);
+    cout << diameter(root);
 
     return 0;
 }
