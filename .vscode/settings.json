@@ -11,6 +11,9 @@
         "numeric": "cpp",
         "new": "cpp",
         "bitset": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "random": "cpp",
+        "array": "cpp",
+        "string_view": "cpp"
     }
 }

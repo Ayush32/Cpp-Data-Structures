@@ -6,35 +6,45 @@
 #include <stack>
 using namespace std;
 
-bool isValid(char *s)
+bool isValid(string s)
 {
     stack<char> stk;
-    for (int i = 0; s[i] != '\0'; i++)
+    for (char c : s)
     {
-        char ch = s[i];
-        char a = '(';
-        char b = ')';
-
-        if (ch == a)
+        if (c == '(' || c == '{' || c == '[')
         {
-            stk.push(ch);
+            stk.push(c);
         }
-        else if (ch == b)
+        else
         {
-            if (stk.empty() || stk.top() != a)
+            if (stk.empty())
+            {
+
+                return false;
+            }
+            if (c == ')' && stk.top() != '(')
+            {
+                return false;
+            }
+            if (c == '}' && stk.top() != '{')
+            {
+                return false;
+            }
+            if (c == ']' && stk.top() != '[')
             {
                 return false;
             }
             stk.pop();
         }
     }
+
     return stk.empty();
 }
 
 int main()
 {
 
-    char s[100] = "(())((";
+    char s[100] = "()[]{}";
     if (isValid(s))
     {
         cout << "True" << endl;
