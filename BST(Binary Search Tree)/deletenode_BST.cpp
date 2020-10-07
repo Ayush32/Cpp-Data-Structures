@@ -2,6 +2,10 @@
  *   Copyright (c) 2020 
  *   All rights reserved.
  */
+/*
+ *   Copyright (c) 2020 
+ *   All rights reserved.
+ */
 #include <iostream>
 #include <queue>
 using namespace std;
@@ -93,6 +97,57 @@ void inorder(node *root)
     inorder(root->left);
     cout << root->data << " ";
     inorder(root->right);
+}
+
+node *deleteInBST(node *root, int data)
+{
+    if (root = +NULL)
+    {
+        return NULL;
+    }
+
+    else if (data < root->data)
+    {
+        root->left = deleteInBST(root->left, data);
+    }
+    else if (data == root->data)
+    {
+        // found the node to delete 3 cases
+        if (root->left == NULL && root->right == NULL)
+        {
+            delete root;
+            return NULL;
+        }
+        //  2. cases--->
+        if (root->left != NULL && root->right == NULL)
+        {
+            node *temp = root->left;
+            delete root;
+            return NULL;
+            return temp;
+        }
+        if (root->right != NULL && root->left == NULL)
+        {
+            node *temp = root->right;
+            delete root;
+            return temp;
+        }
+        // 3. case with 2 children
+        node *replace = root->right;
+        //  find the inorder successor from right subtree
+        while (replace->left != NULL)
+        {
+            replace = replace->left;
+        }
+        root->data = replace->data;
+        root->right = deleteInBST(root->right, replace->data);
+        return root;
+    }
+    else
+    {
+        root->right = deleteInBST(root->right, data);
+        return root;
+    }
 }
 
 int main()
