@@ -101,7 +101,7 @@ void inorder(node *root)
 
 node *deleteInBST(node *root, int data)
 {
-    if (root = +NULL)
+    if (root == NULL)
     {
         return NULL;
     }
@@ -109,6 +109,7 @@ node *deleteInBST(node *root, int data)
     else if (data < root->data)
     {
         root->left = deleteInBST(root->left, data);
+        return root;
     }
     else if (data == root->data)
     {
@@ -123,7 +124,6 @@ node *deleteInBST(node *root, int data)
         {
             node *temp = root->left;
             delete root;
-            return NULL;
             return temp;
         }
         if (root->right != NULL && root->left == NULL)
@@ -157,12 +157,6 @@ int main()
     cout << endl;
     int s;
     cin >> s;
-    if (searchNodeInBST(root, s))
-    {
-        cout << "Present" << endl;
-    }
-    else
-    {
-        cout << "Not Present" << endl;
-    }
+    root = deleteInBST(root, s);
+    inorder(root);
 }
