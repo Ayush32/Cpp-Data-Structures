@@ -17,3 +17,13 @@ int main()
         {
             if (s[i] == 21 or stoi(s) % 21 == 0)
             {
+                cout << "yes" << endl;
+            }
+            else
+            {
+                cout << "no" << endl;
+            }
+        }
+    }
+    return 0;
+}

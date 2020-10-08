@@ -1,1 +1,2 @@
-v2.push_back(count);
+int left;
+    int right;

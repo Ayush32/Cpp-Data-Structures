@@ -11,7 +11,7 @@ int main()
     cin >> n;
     int maximumsum = 0;
     int currsum = 0;
-    int a[1000];
+    int a[n];
     int left;
     int right;
 
@@ -43,11 +43,6 @@ int main()
     // print the maxsum
     cout << "Maximum Sum " << maximumsum << endl;
     // print the subarrays
-
-    for (int k = left; k <= right; k++)
-    {
-        cout << a[k] << ",";
-    }
 
     return 0;
 }
