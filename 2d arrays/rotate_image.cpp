@@ -45,7 +45,7 @@ void display(int a[][1000], int n)
 int main()
 {
 
-       int n;
+    int n;
     cin >> n;
     int a[1000][1000];
 
