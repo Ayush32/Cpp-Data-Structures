@@ -1,3 +1,7 @@
+/*
+ *   Copyright (c) 2020 
+ *   All rightinput1 reserved.
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
